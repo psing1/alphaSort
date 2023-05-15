@@ -22,8 +22,8 @@ class Main {
 
       System.out.println("\nEnter item name to check if it is in list: ");
       String temp2 = sc.nextLine();
-      
-      if (Sort.searchItem(List,temp2) == true){
+      Sort list = new Sort(List,temp2);
+      if (list.searchItem(List,temp2)== true){
         System.out.println(temp2 + " is in the list.\n");
       }
       else {
@@ -39,8 +39,6 @@ class Main {
           System.out.println("\nIncorrect Input!\n");
         }
       }
-
-    List = Sort.sort(List);
-    System.out.println(List);
+    System.out.println(list.sort(List));
   }
 }
